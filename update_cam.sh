@@ -1,4 +1,4 @@
-function update_cam() {
+function update_cam {
 	echo `date` update cam [$2] starting...
 	tmp_file = /tmp/$2.jpg
 	rm $tmp_file
