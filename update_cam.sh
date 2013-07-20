@@ -1,4 +1,6 @@
-function update_cam {
+#!/bin/sh
+
+update_cam() {
 	echo `date` update cam [$2] starting...
 	TMP_FILE=/tmp/$2.jpg
 	curl --globoff "http://$1/img/snapshot.cgi?[size=3][&quality=3]" > $TMP_FILE
