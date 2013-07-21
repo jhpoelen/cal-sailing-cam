@@ -1,6 +1,6 @@
 # Setup 
- 1. 2 webcams of model linksys/ cisco WVC80N with fixed ip addresses (cam-dock:  192.168.1.253, cam-restaurant:  192.168.1.252)
- 2. configured raspberry pi model B connected with ethernet to cal-sailing internet router
+ 1. 2 webcams of model linksys/ cisco WVC80N with fixed ip addresses (cam-dock:  192.168.1.253, cam-restaurant:  192.168.1.252) connected to cal-sailing router through WiFi
+ 2. configured raspberry pi model B connected with ethernet cable to cal-sailing internet router
 
 # Sequence
 
