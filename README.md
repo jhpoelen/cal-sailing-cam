@@ -2,6 +2,9 @@
  1. 2 webcams of model linksys/ cisco WVC80N with fixed ip addresses (cam-dock:  192.168.1.253, cam-restaurant:  192.168.1.252) connected to cal-sailing router through WiFi
  2. configured raspberry pi model B connected with ethernet cable to cal-sailing internet router
 
+# Pi In Action
+![pi in action](pi_at_cal-sailing_july_2013.jpg)
+
 # Sequence
 
 Every minute, the pi downloads the script update_cam.sh from github and executes it. 
