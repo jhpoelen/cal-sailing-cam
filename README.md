@@ -23,11 +23,13 @@ Then the scripts sends the images to cal-sailing.appspot.com with a HTTP POST us
 
 If the pi has troubles, you can used the following credentials to login to the pi and troubleshoot.  There should be a logfile called update_cam.log with information.
 
-At the clubhouse, connect to the interwebs and login using something like
+At the clubhouse, connect to the club's wifi and login using something like
 ```
 ssh pi@raspberrypi.local
 ```
 You'll be prompted for a password.  The password is the minimum wind speed at which a junior sailing test can be administered.
+
+If you can't access the raspberry pi, then it is possible that the pi is (a) missing / destroyed (b) has no power or (c) is not connected to router / internet. Please open an issues [here](http://bitbucket.org/jhpoelen/cal-sailing/issues/new) if you can't fix it yourself.
 
 # Rebuilding the Raspberry Pi
 
