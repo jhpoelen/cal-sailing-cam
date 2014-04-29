@@ -7,9 +7,11 @@ This page describes the webcam setup at the cal-sailing club in Berkeley, CA.  T
 ![diagram](cal-sailing-diagram.dot.png)
 
 # What does the raspberry pi look like?
+## On the outside, with paper case
 ![pi in action](pi_at_cal-sailing_july_2013.jpg)
-
-
+## On the inside
+Notice that a happy pi, as shown below, has red (power), green (network activity), yellow (network link) lights on.
+![happy pi](happy_pi.jpg)
 
 # Sequence
 
