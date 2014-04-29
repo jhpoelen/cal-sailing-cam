@@ -1,4 +1,4 @@
-This page describes the webcam setup at the cal-sailing club in Berkeley, CA.  This setup is used (time of writing July 2013) to publish cam images to webcam on http://cal-sailing.org .
+This page describes the webcam setup at the cal-sailing club in Berkeley, CA.  This setup is used (time of writing July 2013) to publish cam images to webcam on http://cal-sailing.org using http://cal-sailing.appspot.com .
 
 # Setup
  1. 2 webcams of model linksys/ cisco WVC80N with fixed ip addresses (cam-dock:  192.168.1.253, cam-restaurant:  192.168.1.252) connected to cal-sailing router with ethernet cables.
