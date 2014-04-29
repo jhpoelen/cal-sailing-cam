@@ -35,7 +35,7 @@ In case the raspberry pi dies, or gets injured, please follow these steps to cre
 
  1. Image SD Card (4 GB min) with Raspbian “wheezy” image (see http://www.raspberrypi.org/downloads for more info).
  2. Connect pi to network using ethernet, use router to figure out which ip address pi got
- 3. Login ```ssh pi@[ip address]``` with default password (see http://www.raspberrypi.org/downlaod for more info).
+ 3. Login ```ssh pi@[ip address]``` with default password (see http://www.raspberrypi.org/downloads for more info).
  4. Change password to club password (see above) using ```passwd```
  4. Setup avahi/zeroconf to allow easy login through raspberrypi.local (just google "avahi zeroconf raspberry pi")
  5. Edit crontab using ```crontab -e```
