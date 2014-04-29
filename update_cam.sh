@@ -14,5 +14,7 @@ update_cam() {
 	echo `date` update cam [$2] done.
 }
 
+curl http://cal-sailing.appspot.com/ping
 update_cam 192.168.1.252 restaurant
 update_cam 192.168.1.253 dock
+
