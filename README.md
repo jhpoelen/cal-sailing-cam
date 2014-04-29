@@ -44,6 +44,6 @@ In case the raspberry pi dies, or gets injured, please follow these steps to cre
  4. Change password to club password (see above) using ```passwd```
  4. Setup avahi/zeroconf to allow easy login through raspberrypi.local (just google "avahi zeroconf raspberry pi")
  5. Edit crontab using ```crontab -e```
- 6. add crontab job to send images ```* * * * * sh -c "`curl --silent https://raw.github.com/jhpoelen/cal-sailing-cam/master/update_cam.sh`" >> /home/pi/update_cam.log 2>&1```
+ 6. add crontab job to send images ```* * * * * sh -c "`curl -L --silent https://raw.github.com/jhpoelen/cal-sailing-cam/master/update_cam.sh`" >> /home/pi/update_cam.log 2>&1```
  7. add contrab to clean logs every day at midnight ```0 0 * * * rm /home/pi/update_cam.log 2>&1``` 
  8. save crontab and . . . you're done.
