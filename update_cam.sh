@@ -17,7 +17,7 @@ update_cam() {
 update_hd_cam() {
 	echo `date` update cam [$2] starting...
 	TMP_FILE=/tmp/$2.jpg
-	avconv "http://$1:554" > $TMP_FILE
+	avconv -i "http://$1:554" $TMP_FILE
 	if [ -f $TMP_FILE ] 
 	then
 		curl -F "$2=@$TMP_FILE" -v http://cal-sailing.appspot.com/cam
