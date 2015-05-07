@@ -4,7 +4,7 @@ digraph rendle {
        shape = "record"
      ];
 	"restaurant" [
-	   label = "restaurant cam | { linksys/cisco | WVC80N | 192.168.1.252 }"
+	   label = "restaurant cam | { HiSilicon  | Hi3516C | 192.168.1.10 }"
 	   shape = "record"
 	];
     "raspberry" [
@@ -14,5 +14,5 @@ digraph rendle {
 	"raspberry"->"dock"[label="(1) grab image"]
 	"raspberry"->"restaurant"[label="(2) grab image"]
 	"raspberry"->"cal-sailing.appspot.com"[label="(3) upload images"]
-    label="Cal Sailing Webcams (Apr 2014)";
+    label="Cal Sailing Webcams (May 2015)";
 }
