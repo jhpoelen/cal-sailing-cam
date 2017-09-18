@@ -3,6 +3,7 @@ This page describes the webcam setup at the cal-sailing club in Berkeley, CA.  T
 # Setup
  1. 2 webcam of model linksys/ cisco WVC80N (dock) and [HiSilicon Hi3516C](http://www.hkvstar.com/pdf/Hi3516C.pdf) (restaurant) with fixed ip addresses (dock:  192.168.1.253, restaurant:  192.168.1.10) connected to cal-sailing router with ethernet cables.
  2. configured raspberry pi model B connected with ethernet cable to cal-sailing internet router
+ 3. uses UPS to power webcams and raspberry pi to smooth out temperamental power supply
 
 ![diagram](cal-sailing-diagram.dot.png)
 
