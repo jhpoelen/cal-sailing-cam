@@ -12,7 +12,7 @@ digraph rendle {
         shape = "record"
     ]
     "ups" [
-        label = "ups power supply | { brand? | model? }"
+        label = "ups power supply | { APC | BGE70 }"
         shape = "record"
     ]
     "raspberry"->"dock"[label="(1) grab image\nhttp://"]
