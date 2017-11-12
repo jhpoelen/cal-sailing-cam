@@ -19,8 +19,7 @@ OPTIONS: I18n
 Compiled on Feb  7 2016, 13:37:27.
 Port /dev/ttyUSB0, 11:54:59
 
-Press CTRL-A Z for help on special keys
-```
+Press CTRL-A Z for help on special keys```
 3. type ```TEST``` --> expect device to return TEST in response, looks something like: ```TEST```
 4. type ```VER``` --> expect version of firmware to return, looks something like: ```OK
 May  1 2012
