@@ -23,10 +23,10 @@ digraph rendle {
         label = "Router | { netopia }"
         shape = "record"
     ]
-    "wind"->"console"
-    "console"->"link"
-    "link"->"link-ip"
-    "link-ip"->"switch"
-    "switch"->"router"
+    "wind"->"console"[label="(1) some radio signal"]
+    "console"->"link"[label="(2) serial"]
+    "link"->"link-ip"[label="(3) usb"]
+    "link-ip"->"switch"[label="(4) tcp/ip"]
+    "switch"->"router"[label="(5) tcp/ip"]
     label="Cal Sailing Weather Station (Nov 2017)"
 }
