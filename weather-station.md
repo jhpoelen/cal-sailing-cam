@@ -1,6 +1,6 @@
 This page describes the setup of the weather station at [cal sailling club](http://cal-sailing.org).
 
-![diagram](../raw/master/weather-station.dot.png)
+![diagram](weather-station.dot.png)
 
 # documentation
 
