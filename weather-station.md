@@ -13,13 +13,15 @@ Serial Connection settings, from http://madscientistlabs.blogspot.com/2011/01/da
 
 (testing on ubuntu 16.04)
 1. Connect USB from WeatherLink 6510 USB to (linux) laptop
-2. open terminal and execute ```sudo minicom -D /dev/ttyUSB0 --baudrate 19200``` (ubuntu typically ttyUSB0). Expected output something like ```Welcome to minicom 2.7
+2. open terminal and execute 
+```sudo minicom -D /dev/ttyUSB0 --baudrate 19200``` (ubuntu typically ttyUSB0). Expected output something like ```Welcome to minicom 2.7
 
 OPTIONS: I18n 
 Compiled on Feb  7 2016, 13:37:27.
 Port /dev/ttyUSB0, 11:54:59
 
 Press CTRL-A Z for help on special keys```
+
 3. type ```TEST``` --> expect device to return TEST in response, looks something like: ```TEST```
 4. type ```VER``` --> expect version of firmware to return, looks something like: ```OK
 May  1 2012
@@ -34,4 +36,5 @@ May  1 2012
 6 = eb                                                                          
 7 = f6``` with data segments 0-7 repeating every 2s . 
 
+6. type ```STRMOFF```
 
