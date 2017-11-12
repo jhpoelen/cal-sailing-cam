@@ -1,0 +1,32 @@
+digraph rendle {
+    "wind" [
+       label = "anemometer | { Davis Vue }"
+       shape = "record"
+    ]
+    "console" [
+        label = "console | { Davis Vantage Vue  | 6250 }"
+	 shape = "record"
+    ]
+    "link" [
+        label = "WeatherLink | { 6510USB }"
+        shape = "record"
+    ]
+    "link-ip" [
+        label = "TP-Link MR3020  | { Ambient WeatherBridge | Universal WiFi IP Ethernet Server | http://192.168.1.102 | u: meteobridge | p: meteobridge }"
+        shape = "record"
+    ]
+    "switch" [
+        label = "Network Switch"
+        shape = "record"
+    ]
+    "router" [
+        label = "Router | { netopia }"
+        shape = "record"
+    ]
+    "wind"->"console"
+    "console"->"link"
+    "link"->"link-ip"
+    "link-ip"->"switch"
+    "switch"->"router"
+    label="Cal Sailing Weather Station (Nov 2017)"
+}
