@@ -4,8 +4,8 @@ This page describes the setup of the weather station at [cal sailling club](http
 
 # documentation
 
-[Davis Vantage Serial Protocol Docs](http://www.davisnet.com/support/weather/download/VantageSerialProtocolDocs_v261.pdf)
-[Wunderground Upload Protocol](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol)
+ * [Davis Vantage Serial Protocol Docs](http://www.davisnet.com/support/weather/download/VantageSerialProtocolDocs_v261.pdf)
+ * [Wunderground Upload Protocol](http://wiki.wunderground.com/index.php/PWS_-_Upload_Protocol)
 # Troubleshooting
 
 ## Check whether data is coming from the Davis Vantage Vue console
