@@ -11,4 +11,6 @@ update_vantage_vue() {
     echo "LPS 1 1\n" > $VUE_SERIAL
 }
 
+curl "http://cal-sailing.appspot.com/cam/vue" > /dev/null
+
 update_vantage_vue
