@@ -33,4 +33,4 @@ update_hd_cam 192.168.1.10 restaurant
 update_cam 192.168.1.253 dock
 
 # grab and push Vantage Vue weather info
-sh -c "`curl -L --silent https://raw.github.com/jhpoelen/cal-sailing-cam/master/vantage-vue/vantage_vue_lsp_capture.sh`
+sh -c "`curl -L --silent https://raw.github.com/jhpoelen/cal-sailing-cam/master/vantage-vue/vantage_vue_lsp_capture.sh`"
