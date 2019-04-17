@@ -31,7 +31,7 @@ update_hd_cam() {
 update_whiteboard_cam() {
 	echo `date` update cam [$2] starting...
 	TMP_FILE=/tmp/$2.jpg
-	echo avconv -i "rtsp://admin:@$1:554" $TMP_FILE > $TMP_FILE
+	avconv -i "rtsp://$1:554/user=admin&password=&channel=&stream=.sdp?real_stream--rtp-caching=100" $TMP_FILE
 	if [ -f $TMP_FILE ] 
 	then
 		curl -F "$2=@$TMP_FILE" -v http://cal-sailing.appspot.com/cam
