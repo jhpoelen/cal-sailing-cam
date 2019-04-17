@@ -32,7 +32,7 @@ update_whiteboard_cam() {
 	echo `date` update cam [$2] starting...
 	TMP_FILE=/tmp/$2.jpg
 	#avconv -i "rtsp://$1:34567" $TMP_FILE
-	ping $1 > $TMP_FILE
+	#ping $1 > $TMP_FILE
 	if [ -f $TMP_FILE ] 
 	then
 		curl -F "$2=@$TMP_FILE" -v http://cal-sailing.appspot.com/cam
