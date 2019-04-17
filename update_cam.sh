@@ -45,7 +45,7 @@ update_whiteboard_cam() {
 update_whiteboard2_cam() {
 	echo `date` update cam [$2] starting...
 	TMP_FILE=/tmp/$2.jpg
-	curl --max-time 30 http://$1/webcapture.jpg?command=snap&chanel=1 > $TMP_FILE
+	curl --max-time 30 http://$1/webcapture.jpg?user=admin&password=&command=snap&chanel=1 > $TMP_FILE
 	if [ -f $TMP_FILE ] 
 	then
 		curl -F "$2=@$TMP_FILE" -v http://cal-sailing.appspot.com/cam
