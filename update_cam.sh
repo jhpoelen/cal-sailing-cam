@@ -28,7 +28,7 @@ update_hd_cam() {
 	echo `date` update cam [$2] done.
 }
 
-update_whiteboard_cam() {
+update_whiteboard_hires_cam() {
 	echo `date` update cam [$2] starting...
 	TMP_FILE=/tmp/$2.jpg
 	avconv -i "rtsp://$1:554/user=admin&password=&channel=&stream=.sdp?real_stream--rtp-caching=100" $TMP_FILE
@@ -42,7 +42,7 @@ update_whiteboard_cam() {
 	echo `date` update cam [$2] done.
 }
 
-update_whiteboard2_cam() {
+update_whiteboard_lowres_cam() {
 	echo `date` update cam [$2] starting...
 	TMP_FILE=/tmp/$2.jpg
 	avconv -i "rtsp://$1:554/user=admin&password=&channel=1&stream=1.sdp?real_stream--rtp-caching=100" $TMP_FILE
@@ -60,5 +60,5 @@ update_whiteboard2_cam() {
 curl http://cal-sailing.appspot.com/ping
 update_hd_cam 192.168.1.10 restaurant
 update_cam 192.168.1.253 dock
-update_whiteboard_cam 192.168.1.12 whiteboard
-update_whiteboard2_cam 192.168.1.12 whiteboard2
+update_whiteboard_lowres_cam 192.168.1.12 whiteboard
+#update_whiteboard_hires_cam 192.168.1.12 whiteboard
