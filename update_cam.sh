@@ -31,4 +31,6 @@ update_hd_cam() {
 curl http://cal-sailing.appspot.com/ping
 update_hd_cam 192.168.1.10 restaurant
 update_cam 192.168.1.253 dock
-update_hd_cam 192.168.1.12 whiteboard
+update_hd_cam 192.168.1.10 whiteboard
+#update_hd_cam 192.168.1.12 whiteboard
+
