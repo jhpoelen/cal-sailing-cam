@@ -7,6 +7,10 @@ digraph rendle {
         label = "restaurant cam | { HiSilicon  | Hi3516C | 192.168.1.10 }"
 	 shape = "record"
     ]
+    "whiteboard" [
+        label = "whiteboard cam | { HiSilicon  | Hi3518E | 192.168.1.12 }"
+	 shape = "record"
+    ]
     "raspberry" [
         label = "raspberry pi | { raspberrypi.org | model B | raspberrypi.local }"
         shape = "record"
@@ -17,9 +21,10 @@ digraph rendle {
     ]
     "raspberry"->"dock"[label="(1) grab image\nhttp://"]
     "raspberry"->"restaurant"[label="(2) grab image\nrtsp://"]
-    "raspberry"->"cal-sailing.appspot.com"[label="(3) upload images"]
+    "raspberry"->"whiteboard"[label="(3) grab image\nrtsp://"]
+    "raspberry"->"cal-sailing.appspot.com"[label="(4) upload images"]
     "ups"->"raspberry"[label="120V ac power"]
     "ups"->"restaurant"[label="120V ac power"]
     "ups"->"dock"[label="120V ac power"]
-    label="Cal Sailing Webcams (Sept 2017)"
+    label="Cal Sailing Webcams (Apr 2019)"
 }
