@@ -17,7 +17,7 @@ Notice that a happy pi, as shown below, has red (power), green (network activity
 
 # Sequence
 
-Every minute, the pi downloads the script update_cam.sh from github and executes it. 
+Every minute, the pi downloads the script [update_cam.sh](https://github.com/jhpoelen/cal-sailing-cam/blob/master/update_cam.sh) from github and executes it. 
 
 The script captures images from two webcams with a HTTP GET using curl. 
 
