@@ -59,7 +59,7 @@ update_whiteboard_lowres_cam() {
 
 NOW_UNIX_EPOCH=$(date +%s)
 COIN_TOSS=$(od -An -N1 -i  /dev/urandom | head -n1 | tr -d ' ')
-PING_URL=$(echo http://cal-sailing.appspot.com/ping?date=$NOW_UNIX_EPOCH&coin_toss=$COIN_TOSS)
+PING_URL=$(echo "http://cal-sailing.appspot.com/ping?date=$NOW_UNIX_EPOCH&coin_toss=$COIN_TOSS")
 curl "$PING_URL"
 update_hd_cam 192.168.1.10 restaurant
 update_cam 192.168.1.253 dock
