@@ -57,7 +57,8 @@ update_whiteboard_lowres_cam() {
 }
 
 
-curl http://cal-sailing.appspot.com/ping
+PING_URL=$(echo http://cal-sailing.appspot.com/ping?date=$(date +%s))
+curl "$PING_URL"
 update_hd_cam 192.168.1.10 restaurant
 update_cam 192.168.1.253 dock
 update_whiteboard_lowres_cam 192.168.1.12 whiteboard
