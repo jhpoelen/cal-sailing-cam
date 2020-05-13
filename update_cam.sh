@@ -56,14 +56,9 @@ update_whiteboard_lowres_cam() {
 	echo `date` update cam [$2] done.
 }
 
-# reduce load on server by only processing every other 5 cycles
-COIN_TOSS=$(($RANDOM % 6))
-if [ $COIN_TOSS -eq 0 ] 
-then
-  curl http://cal-sailing.appspot.com/ping?date=$(date +%s)
-  update_hd_cam 192.168.1.10 restaurant_cam
-  update_cam 192.168.1.253 dock_cam
-  update_whiteboard_lowres_cam 192.168.1.12 whiteboard
-  #update_whiteboard_hires_cam 192.168.1.12 whiteboard
-fi
 
+curl http://cal-sailing.appspot.com/ping
+update_hd_cam 192.168.1.10 restaurant
+update_cam 192.168.1.253 dock
+update_whiteboard_lowres_cam 192.168.1.12 whiteboard
+#update_whiteboard_hires_cam 192.168.1.12 whiteboard
