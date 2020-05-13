@@ -56,9 +56,8 @@ update_whiteboard_lowres_cam() {
 	echo `date` update cam [$2] done.
 }
 
-
-NOW_UNIX_EPOCH=$(date +%s)
-curl "http://cal-sailing.appspot.com/ping?date=${NOW_UNIX_EPOCH}"
+PING_URL=$(echo http://cal-sailing.appspot.com/ping?date=$(date +%s))
+curl "$PING_URL"
 update_hd_cam 192.168.1.10 restaurant
 update_cam 192.168.1.253 dock
 update_whiteboard_lowres_cam 192.168.1.12 whiteboard
