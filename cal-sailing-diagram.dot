@@ -19,12 +19,48 @@ digraph rendle {
         label = "ups power supply | { APC | BGE70 }"
         shape = "record"
     ]
-    "raspberry"->"dock"[label="(1) grab image\nhttp://"]
-    "raspberry"->"restaurant"[label="(2) grab image\nrtsp://"]
-    "raspberry"->"whiteboard"[label="(3) grab image\nrtsp://"]
-    "raspberry"->"cal-sailing.appspot.com"[label="(4) upload images"]
-    "ups"->"raspberry"[label="120V ac power"]
-    "ups"->"restaurant"[label="120V ac power"]
-    "ups"->"dock"[label="120V ac power"]
-    label="Cal Sailing Webcams (Apr 2019)"
+    "thermometer" [
+        label = "thermometer | { make? | model? }"
+        shape = "record"
+    ]
+    "powerswitch" [
+        label = "remote power switch | { make? | model? }"
+        shape = "record"
+    ]
+    "anemometer" [
+        label = "aemometer | { make? | model? }"
+        shape = "record"
+    ]
+    "weatherstation" [
+        label = "Vantage Vue2 console | { Vantage Vue2 | model? }"
+        shape = "record"
+    ]
+    "desktop" [
+        label = "desktop computer | { make | model?/linux }"
+        shape = "record"
+    ]
+    "pine64" [
+        label = "pine64 mini-computer | { make? | model? }"
+        shape = "record"
+    ]
+    "raspberry"->"dock"[label="(A-1) grab image\nhttp://"]
+    "raspberry"->"restaurant"[label="(A-2) grab image\nrtsp://"]
+    "raspberry"->"whiteboard"[label="(A-3) grab image\nrtsp://"]
+    "raspberry"->"cal-sailing.appspot.com"[label="(A-4) upload images\nhttp post"]
+    "wallpower" -> "ups"
+    
+    "ups"->"powerswitch"[label="120V ac power"]
+    "powerswitch"->"raspberry"[label="120V ac power"]
+    "powerswitch"->"dock"[label="120V ac power"]
+    "powerswitch"->"restaurant"[label="120V ac power"]
+    "powerswitch"->"whiteboard"[label="120V ac power"]
+
+    "weatherstation"->"anemometer"[label="(W-1) download wind data\nline-of-sight\nradio signal"]
+    "desktop"->"weatherstation"[label="(W-2) download wind data\nusing WeeWx\nUSB cable"]
+    "desktop"->"cal-sailing.appspot.com"[label="(W-3) upload wind data\nhttp post"]
+
+    "pine64"->"thermometer"[label="(T-1) download temperature data\nserial/USB cable"]
+    "pine64"->"cal-sailing.appspot.com"[label="(T-2) upload temperature data\nhttp post"]
+
+    label="Cal Sailing Webcams/Sensors (Aug 2020)"
 }
