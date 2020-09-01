@@ -1,4 +1,4 @@
-digraph rendle {
+digraph calsailingcam {
     "dock" [
        label = "dock cam | { linksys/cisco | WVC80N | 192.168.1.253 }"
        shape = "record"
@@ -12,7 +12,7 @@ digraph rendle {
 	 shape = "record"
     ]
     "raspberry" [
-        label = "raspberry pi | { raspberrypi.org | model B | raspberrypi.local }"
+        label = "raspberry pi | { raspberrypi.org | model B | raspberrypi.local | github.com/jhpoelen/cal-sailing-cam }"
         shape = "record"
     ]
     "ups" [
@@ -36,17 +36,22 @@ digraph rendle {
         shape = "record"
     ]
     "desktop" [
-        label = "desktop computer | { make | model?/linux }"
+        label = "desktop computer | { make | model?/linux | github.com/cal-sailing/wind2web }"
         shape = "record"
     ]
     "pine64" [
         label = "pine64 mini-computer | { make? | model? }"
         shape = "record"
     ]
+    "server" [
+        label = "cal-sailing.appspot.com | { google cloud | bitbucket.org/jhpoelen/cal-sailing }"
+        shape = "record"
+    ]
+
     "raspberry"->"dock"[label="(A-1) grab image\nhttp://"]
     "raspberry"->"restaurant"[label="(A-2) grab image\nrtsp://"]
     "raspberry"->"whiteboard"[label="(A-3) grab image\nrtsp://"]
-    "raspberry"->"cal-sailing.appspot.com"[label="(A-4) upload images\nhttp post"]
+    "raspberry"->"server"[label="(A-4) upload images\nhttp post"]
     "wallpower" -> "ups"
     
     "ups"->"powerswitch"[label="120V ac power"]
@@ -57,10 +62,10 @@ digraph rendle {
 
     "weatherstation"->"anemometer"[label="(W-1) download wind data\nline-of-sight\nradio signal"]
     "desktop"->"weatherstation"[label="(W-2) download wind data\nusing WeeWx\nUSB cable"]
-    "desktop"->"cal-sailing.appspot.com"[label="(W-3) upload wind data\nhttp post"]
+    "desktop"->"server"[label="(W-3) upload wind data\nhttp post"]
 
     "pine64"->"thermometer"[label="(T-1) download temperature data\nserial/USB cable"]
-    "pine64"->"cal-sailing.appspot.com"[label="(T-2) upload temperature data\nhttp post"]
+    "pine64"->"server"[label="(T-2) upload temperature data\nhttp post"]
 
     label="Cal Sailing Webcams/Sensors (Aug 2020)"
 }
