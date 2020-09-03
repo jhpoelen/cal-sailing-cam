@@ -5,8 +5,8 @@ This page describes the webcam setup at the cal-sailing club in Berkeley, CA.  T
  2. configured raspberry pi model B connected with ethernet cable to cal-sailing internet router
  3. uses UPS to power webcams and raspberry pi to smooth out temperamental power supply
  4. remote IP power switch to remotely restart raspberry pi / cams in case they get stuck 
- 5. anenometer to keep track of local wind conditions
- 6. thermometer to measure local outside temperature
+ 5. anenometer to keep track of local wind conditions (see [wind2web](https://github.com/cal-sailing/wind2web)
+ 6. thermometer to measure local outside temperature 
  7. configured pine64 and desktop computers to get data from sensors to the appspot server
 
 ![diagram](cal-sailing-diagram.dot.png)
