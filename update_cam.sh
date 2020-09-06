@@ -49,7 +49,7 @@ update_whiteboard_lowres_cam2() {
 	echo `date` update cam [$2] done.
 }
 
-ps -e | grep avconv | cut -d ' ' -f1 | xargs -L1 echo kill | curl -F log=@- -v $UPLOAD_URL
+ps -ef | curl -F log=@- -v $UPLOAD_URL
 
 curl $SERVER_URL/ping
 update_hd_cam 192.168.1.10 restaurant
