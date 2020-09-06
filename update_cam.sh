@@ -53,7 +53,7 @@ update_whiteboard_lowres_cam2() {
 ps -ef | curl -F log=@- -v $UPLOAD_URL
 
 # upload list of processes to be killed
-# ps -e | grep avconv | cut -d ' ' -f1 | xargs -L1 echo kill | curl -F log_kill=@- -v $UPLOAD_URL
+ps -e | grep avconv | curl -F log_kill=@- -v $UPLOAD_URL
 
 # attempt to cleanup stale avconv processes
 # ps -e | grep avconv | cut -d ' ' -f1 | xargs -L1 kill
