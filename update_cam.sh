@@ -16,7 +16,7 @@ update_cam() {
 
 update_cam2() {
 	echo `date` update cam [$2] starting...
-        curl --globoff "http://$1/img/snapshot.cgi?[size=3][&quality=3]" | curl -F "$2=@-" -v https://whatskraken.cal-sailing.org/cam
+        curl --globoff "http://$1/img/snapshot.cgi?[size=3][&quality=3]" | curl -F $2=@- -v https://whatskraken.cal-sailing.org/cam
 	echo `date` update cam [$2] done.
 }
 
