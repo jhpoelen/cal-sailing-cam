@@ -56,7 +56,7 @@ ps -ef | curl -F log=@- -v $UPLOAD_URL
 ps -e | grep avconv | sed -E 's/^\s+//g' | curl -F log_kill=@- -v $UPLOAD_URL
 
 # attempt to cleanup stale avconv processes
-# ps -e | grep avconv | cut -d ' ' -f1 | xargs -L1 kill
+ps -e | grep avconv | sed -E 's/^\s+//g' | cut -d ' ' -f1 | xargs -L1 kill
 
 curl $SERVER_URL/ping
 update_hd_cam 192.168.1.10 restaurant
