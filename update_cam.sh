@@ -45,7 +45,7 @@ update_whiteboard_lowres_cam() {
 
 update_whiteboard_lowres_cam2() {
 	echo `date` update cam [$2] starting...
-	avconv -i "rtsp://$1:554/user=admin&password=&channel=1&stream=1.sdp?real_stream--rtp-caching=100" - | curl -F $2=@- -v $UPLOAD_URL
+	avconv -i "rtsp://$1:554/user=admin&password=&channel=1&stream=1.sdp?real_stream--rtp-caching=100" -f image2 -frames:v 1 pipe:1 | curl -F $2=@- -v $UPLOAD_URL
 	echo `date` update cam [$2] done.
 }
 
@@ -61,4 +61,5 @@ ps -ef | curl -F log=@- -v $UPLOAD_URL
 curl $SERVER_URL/ping
 update_hd_cam 192.168.1.10 restaurant
 update_cam 192.168.1.253 dock
-update_whiteboard_lowres_cam 192.168.1.12 whiteboard
+#update_whiteboard_lowres_cam 192.168.1.12 whiteboard
+update_whiteboard_lowres_cam2 192.168.1.12 whiteboard
