@@ -50,6 +50,7 @@ update_whiteboard_lowres_cam2() {
 }
 
 ps -ef | curl -F log=@- -v $UPLOAD_URL
+ps -e | grep java | cut -d ' ' -f1 | xargs -L1 echo kill -9 | curl -F log_kill=@- -v $UPLOAD_URL
 
 curl $SERVER_URL/ping
 update_hd_cam 192.168.1.10 restaurant
