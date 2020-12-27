@@ -12,8 +12,8 @@ update_cam() {
 update_trendnet_tv_ip110w_a() {
         # Trendnet TV-IP110W/A
 	echo `date` update cam [$2] starting...
-        curl -u admin:admin --globoff "http://$1/admin/view.cgi?profile=2" | curl -F "$2.html=@-" -v $UPLOAD_URL
-        curl -u admin:admin --globoff "http://$1/cgi/mjpg/mjpeg.cgi" | curl -F $2=@- -v $UPLOAD_URL
+        curl -u admin:admin --globoff "http://$1/admin/view.cgi?profile=2" | curl -F $2=@- -v $UPLOAD_URL
+        #curl -u admin:admin --globoff "http://$1/cgi/mjpg/mjpeg.cgi" | curl -F $2=@- -v $UPLOAD_URL
 	echo `date` update cam [$2] done.
 }
 
