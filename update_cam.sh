@@ -40,7 +40,7 @@ upload_logs() {
   ps -e | grep "$REGEX" | sed -E 's/^\s+//g' | $CURL -F log_kill=@- -v $UPLOAD_URL
 
   # attempt to cleanup stale avconv processes
-  ps -e | grep "$REGEX" | sed -E 's/^\s+//g' | cut -d ' ' -f1 | xargs -L1 kill
+  #ps -e | grep "$REGEX" | sed -E 's/^\s+//g' | cut -d ' ' -f1 | xargs -L1 kill
 
 }
 
