@@ -3,16 +3,18 @@
 SERVER_URL="https://whatskraken.cal-sailing.org"
 UPLOAD_URL="$SERVER_URL/cam"
 
+CURL="curl --max-time 15"
+
 update_cam() {
 	echo `date` update cam [$2] starting...
-        curl --globoff "http://$1/img/snapshot.cgi?[size=3][&quality=3]" | curl -F $2=@- -v $UPLOAD_URL
+        $CURL --globoff "http://$1/img/snapshot.cgi?[size=3][&quality=3]" | curl -F $2=@- -v $UPLOAD_URL
 	echo `date` update cam [$2] done.
 }
 
 update_trendnet_tv_ip110w_a() {
         # Trendnet TV-IP110W/A
 	echo `date` update cam [$2] starting...
-        curl -u admin:admin --globoff "http://$1/admin/view.cgi?profile=2" | curl -F $2=@- -v $UPLOAD_URL
+        $CURL -u admin:admin --globoff "http://$1/admin/view.cgi?profile=2" | curl -F $2=@- -v $UPLOAD_URL
         #curl -u admin:admin --globoff "http://$1/cgi/mjpg/mjpeg.cgi" | curl -F $2=@- -v $UPLOAD_URL
 	echo `date` update cam [$2] done.
 }
@@ -31,13 +33,14 @@ update_whiteboard_lowres_cam() {
 
 upload_logs() {
   # upload list of running pi processes
-  ps -ef | curl -F log=@- -v $UPLOAD_URL
+  ps -ef | $CURL -F log=@- -v $UPLOAD_URL
 
   # upload list of processes to be killed
-  ps -e | grep avconv | sed -E 's/^\s+//g' | curl -F log_kill=@- -v $UPLOAD_URL
+  local REGEX="curl -F dock="
+  ps -e | grep "$REGEX" | sed -E 's/^\s+//g' | $CURL -F log_kill=@- -v $UPLOAD_URL
 
   # attempt to cleanup stale avconv processes
-  ps -e | grep avconv | sed -E 's/^\s+//g' | cut -d ' ' -f1 | xargs -L1 kill
+  ps -e | grep "$REGEX" | sed -E 's/^\s+//g' | cut -d ' ' -f1 | xargs -L1 kill
 
 }
 
