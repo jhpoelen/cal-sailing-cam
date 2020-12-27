@@ -46,7 +46,7 @@ upload_logs() {
 
 curl $SERVER_URL/ping
 
-upload_logs
+#upload_logs
 
 update_hd_cam 192.168.1.10 restaurant
 
