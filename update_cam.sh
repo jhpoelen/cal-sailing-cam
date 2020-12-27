@@ -37,6 +37,8 @@ upload_logs() {
 
   # attempt to cleanup stale avconv processes
   ps -e | grep avconv | sed -E 's/^\s+//g' | cut -d ' ' -f1 | xargs -L1 kill
+
+  cat /home/pi/update_cam.log | curl -F update_log=@- -v $UPLOAD_URL
 }
 
 curl $SERVER_URL/ping
