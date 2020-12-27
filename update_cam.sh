@@ -9,6 +9,13 @@ update_cam() {
 	echo `date` update cam [$2] done.
 }
 
+update_trendnet_tv_ip110w_a() {
+        # Trendnet TV-IP110W/A
+	echo `date` update cam [$2] starting...
+        curl -u admin:admin --globoff "http://$1/" | curl -F $2=@- -v $UPLOAD_URL
+	echo `date` update cam [$2] done.
+}
+
 update_hd_cam() {
         echo `date` update cam [$2] starting...
         avconv -i "rtsp://$1:554" -f image2 -frames:v 1 pipe:1 | curl -F $2=@- -v $UPLOAD_URL
@@ -35,6 +42,7 @@ upload_logs() {
 curl $SERVER_URL/ping
 update_hd_cam 192.168.1.10 restaurant
 
-update_cam 192.168.1.253 dock
+#update_cam 192.168.1.253 dock
+update_trendnet_tv_ip110w_a 192.168.1.210 dock
 
 update_whiteboard_lowres_cam 192.168.1.12 whiteboard
