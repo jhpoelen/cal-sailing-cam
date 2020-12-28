@@ -15,10 +15,10 @@ update_trendnet_tv_ip110w_a() {
         # Trendnet TV-IP110W/A
 	echo `date` update cam [$2] starting...
         #curl -u 'admin:admin' --globoff "http://$1/admin/view.cgi?profile=2" | curl -F $2=@- -v $UPLOAD_URL
-        STREAM_CHUNK=$2-1M.mjpeg
-        curl "http://$1/cgi/mjpg/mjpeg.cgi" | head -c1048576 > $STREAM_CHUNK 
-        avconv -i "$STREAM_CHUNK" -f image2 -frames:v 1 pipe:1 | curl -F $2=@- -v $UPLOAD_URL
-        rm $2-1M.mjpeg
+        curl "http://$1/cgi/mjpg/mjpeg.cgi"\ 
+        | head -c1048576\
+        | avconv -f mjpeg -i - -f image2 -frames:v 1 pipe:1\
+        | curl -F $2=@- -v $UPLOAD_URL
 	echo `date` update cam [$2] done.
 }
 
