@@ -1,6 +1,6 @@
 digraph rendle {
     "wind" [
-       label = "anemometer | { Davis Vue }"
+       label = "anemometer | { Davis Instruments | 6410 | w/ 6332 transmitter }"
        shape = "record"
     ]
     "console" [
@@ -28,5 +28,5 @@ digraph rendle {
     "link"->"link-ip"[label="(3) usb"]
     "link-ip"->"switch"[label="(4) tcp/ip"]
     "switch"->"router"[label="(5) tcp/ip"]
-    label="Cal Sailing Weather Station (Nov 2017)"
+    label="Cal Sailing Weather Station (Dec 2020)"
 }

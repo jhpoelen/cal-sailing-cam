@@ -1,6 +1,6 @@
 digraph calsailingcam {
     "dock" [
-       label = "dock cam | { linksys/cisco | WVC80N | 192.168.1.253 }"
+       label = "dock cam | { Trendnet | TV-IP110W/A | 192.168.1.210 }"
        shape = "record"
     ]
     "restaurant" [
@@ -28,11 +28,11 @@ digraph calsailingcam {
         shape = "record"
     ]
     "anemometer" [
-        label = "aemometer | { make? | model? }"
+        label = "anemometer | { Davis Instruments | 6410 | w/ 6332 transmitter }"
         shape = "record"
     ]
     "weatherstation" [
-        label = "Vantage Vue2 console | { Vantage Vue2 | model? }"
+        label = "weather console | { Davis | Vantage Vue2 }"
         shape = "record"
     ]
     "desktop" [
@@ -44,7 +44,7 @@ digraph calsailingcam {
         shape = "record"
     ]
     "server" [
-        label = "cal-sailing.appspot.com | { google cloud | bitbucket.org/jhpoelen/cal-sailing }"
+        label = "whatskraken.cal-sailing.org | { bitbucket.org/jhpoelen/cal-sailing }"
         shape = "record"
     ]
 
@@ -67,5 +67,5 @@ digraph calsailingcam {
     "pine64"->"thermometer"[label="(T-1) download temperature data\nserial/USB cable"]
     "pine64"->"server"[label="(T-2) upload temperature data\nhttp post"]
 
-    label="Cal Sailing Webcams/Sensors (Aug 2020)"
+    label="Cal Sailing Webcams/Sensors (Dec 2020)"
 }
