@@ -44,7 +44,7 @@ digraph calsailingcam {
         shape = "record"
     ]
     "server" [
-        label = "whatskraken.cal-sailing.org | { bitbucket.org/jhpoelen/cal-sailing }"
+        label = "whatskraken.cal-sailing.org | { proxied Google Cloud | bitbucket.org/jhpoelen/cal-sailing }"
         shape = "record"
     ]
 
